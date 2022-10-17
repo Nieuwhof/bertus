@@ -3,7 +3,7 @@
 - name: Network Getting Started First Playbook
   connection: ansible.netcommon.network_cli
   gather_facts: false
-  hosts: all
+  hosts: 38.242.235.119
   tasks:
 
     - name: Get config for VyOS devices
