@@ -21,6 +21,6 @@
       dnf:
         name: golang
         state: present
-    #  tags: 
-    #  - ingo
-    #  - never
+      tags: 
+      - ingo
+      - never
