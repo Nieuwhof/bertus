@@ -1,0 +1,7 @@
+---
+- name: Check connectivity to remote servers
+  hosts: web
+  gather_facts: True
+  tasks:
+    - name: ping
+      ping:
