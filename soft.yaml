@@ -1,0 +1,5 @@
+---
+- hosts: preston
+  become: true
+  roles:
+     - soft
