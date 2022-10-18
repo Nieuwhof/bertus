@@ -12,9 +12,9 @@
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
-#  tags:
-#  - inportainer
-#  - never
+  tags:
+   - inportainer
+   - never
 
 - name: Install go
   yum:
