@@ -15,37 +15,33 @@
   - ungo
   - never
 
-#- name: install Docker dependencies
-#  dnf:
-#    name: "{{item}}"
-#    state: present
-#    update_cache: yes
-#   loop:
-#     - apt-transport-https
-#     - ca-certificates
-#     - curl
-#     - gnupg-agent
-#     - software-properties-common
-#     - python3-docker 
-#  tags:
-#  - indocker
-#  - never
+- name: install Docker dependencies
+  dnf:
+    name: "{{item}}"
+    state: present
+    update_cache: yes
+   loop:
+     - yum-utils
+ 
+  tags:
+  - indocker
+  - never
 
 #- name: Sign Docker  GPG
-#  rpm_key:
+#  yum_repository:
 #        url: https://download.docker.com/linux/ubuntu/gpg
 #        state: present
 #  tags:
 #  - indocker
 #  - never
 
-#- name: Install Docker repository
-#  yum_repository:
-#     repo: deb https://download.docker.com/linux/ubuntu focal stable
-#     state: present
-#  tags:
-#  - indockerr
-#  - never
+- name: Install Docker repository
+  yum_repository:
+     repo: https://download.docker.com/linux/centos/docker-ce.repo
+     state: present
+  tags:
+  - indockerr
+  - never
 
 - name: Install Docker
   dnf:
@@ -56,6 +52,7 @@
      - docker-ce
      - docker-ce-cli
      - containerd.io
+     - docker-compose-plugin
   tags:
   - indocker
   - never
