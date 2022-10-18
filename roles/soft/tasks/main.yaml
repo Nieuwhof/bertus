@@ -1,6 +1,6 @@
 ---
 - name: Install go
-  apt:
+  dnf:
     name: golang-go
     state: present
   tags: 
@@ -8,7 +8,7 @@
   - never
 
 - name: Remove go
-  apt:
+  dnf:
     name: golang-go
     state: absent
   tags: 
@@ -16,7 +16,7 @@
   - never
 
 - name: install Docker dependencies
-  apt:
+  dnf:
     name: "{{item}}"
     state: present
     update_cache: yes
@@ -48,7 +48,7 @@
   - never
 
 - name: Install Docker
-  apt:
+  dnf:
     name: "{{item}}"
     state: latest
     update_cache: yes
@@ -70,7 +70,7 @@
   - never
 
 - name: Install git
-  apt:
+  dnf:
     name: git-all
     state: present
   tags:
@@ -78,7 +78,7 @@
   - never
 
 - name: Remove git
-  apt:
+  dnf:
     name: git-all
     state: absent
   tags:
@@ -86,7 +86,7 @@
   - never
 
 - name: Remove Docker
-  apt:
+  dnf:
     name: "{{item}}"
     state: absent
     update_cache: yes
@@ -99,7 +99,7 @@
   - never
 
 - name: Install Docker compose
-  apt:
+  dnf:
     name: docker-compose
     state: present
   tags:
@@ -107,7 +107,7 @@
   - never
 
 - name: Remove Docker compose
-  apt:
+  dnf:
     name: docker-compose
     state: absent
   tags:
@@ -183,7 +183,7 @@
   - never
 
 - name: Install RDP
-  apt:
+  dnf:
     name: "{{item}}"
     state: absent 
     update_cache: yes
@@ -195,7 +195,7 @@
   - never
 
 - name: Install MC
-  apt:
+  dnf:
     name: "{{item}}"
     state: latest
     update_cache: yes
@@ -206,7 +206,7 @@
   - never
  
 - name: Install MC
-  apt:
+  dnf:
     name: "{{item}}"
     state: absent
     update_cache: yes
