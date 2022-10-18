@@ -36,7 +36,7 @@
         url: https://download.docker.com/linux/ubuntu/gpg
         state: present
   tags:
-  - indocker
+  - indockerr
   - never
 
 - name: Install Docker repository
@@ -44,7 +44,7 @@
      repo: deb https://download.docker.com/linux/ubuntu focal stable
      state: present
   tags:
-  - indocker
+  - indockerr
   - never
 
 - name: Install Docker
