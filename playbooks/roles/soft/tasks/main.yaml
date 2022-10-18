@@ -22,6 +22,8 @@
     update_cache: yes
   loop:
      - yum-utils
+     - device-mapper-persistent-data
+     - lvm2
  
   tags:
   - indocker
@@ -35,10 +37,11 @@
 #  - indocker
 #  - never
 
-- name: Install Docker repository
-  yum_repository:
-     repo: https://download.docker.com/linux/centos/docker-ce.repo
-     state: present
+- name: "Configuring docker-ce repo"
+  get_url:
+    url: https://download.docker.com/linux/centos/docker-ce.repo
+    dest: /etc/yum.repos.d/docker-ce.repo
+    mode: 0644
   tags:
   - indocker
   - never
