@@ -21,7 +21,7 @@
        - never
 
     - name: Install go
-      yum:
+      dnf:
         name: golang-go
         state: present
     #  tags: 
