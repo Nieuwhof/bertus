@@ -1,6 +1,5 @@
 ---
 - name: Check connectivity to remote servers
-  hosts: preston
   gather_facts: True
   tasks:
     - name: ping
