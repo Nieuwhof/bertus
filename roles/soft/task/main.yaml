@@ -12,22 +12,22 @@
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
-  tags:
-  - inportainer
-  - never
+#  tags:
+#  - inportainer
+#  - never
 
 - name: Install go
   yum:
     name: golang-go
     state: present
-  tags: 
-  - ingo
-  - never
+#  tags: 
+#  - ingo
+#  - never
 
-- name: Remove go
-  yum:
-    name: golang-go
-    state: absent
-  tags: 
-  - ungo
-  - never
+#- name: Remove go
+#  yum:
+#    name: golang-go
+#    state: absent
+#  tags: 
+#  - ungo
+#  - never
