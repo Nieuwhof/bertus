@@ -1,4 +1,7 @@
 ---
+- hosts: preston
+  become: true
+  
 - name: Create portainer container
   docker_container:
     name: portainer
