@@ -22,7 +22,7 @@
 
     - name: Install go
       dnf:
-        name: golang-go
+        name: golang
         state: present
     #  tags: 
     #  - ingo
