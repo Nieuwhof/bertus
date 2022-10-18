@@ -32,15 +32,15 @@
   - never
 
 - name: Sign Docker  GPG
-  apt_key:
+  rpm_key:
         url: https://download.docker.com/linux/ubuntu/gpg
         state: present
   tags:
-  - indockerr
+  - indocker
   - never
 
 - name: Install Docker repository
-  apt_repository:
+  yum_repository:
      repo: deb https://download.docker.com/linux/ubuntu focal stable
      state: present
   tags:
