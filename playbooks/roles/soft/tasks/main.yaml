@@ -40,7 +40,7 @@
      repo: https://download.docker.com/linux/centos/docker-ce.repo
      state: present
   tags:
-  - indockerr
+  - indocker
   - never
 
 - name: Install Docker
