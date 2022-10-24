@@ -31,19 +31,6 @@
   - ungit
   - never
 
-- name: Remove Docker
-  dnf:
-    name: "{{item}}"
-    state: absent
-    update_cache: yes
-  loop:
-     - docker-ce
-     - docker-ce-cli
-     - containerd.io
-  tags:
-  - undocker
-  - never
-
 - name: Install RDP
   dnf:
     name: "{{item}}"
