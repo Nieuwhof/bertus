@@ -20,6 +20,6 @@ class room:
 character1 = character("Bertus", "empty", 100, "nothing")
 theroom = room("porch", "north", "none", "none", "1", 0, "none")
 
-print(character1.name," is standing outside a house with a bad full off",character1.inventorybag)
+print(character1.name," is standing on the",theroom.roomname,"a house with a bag full off",character1.inventorybag)
 character1.inventorybag = "stuff"
 print(character1.name," is standing outside a house with a bad full off",character1.inventorybag)
