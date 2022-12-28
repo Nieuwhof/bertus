@@ -33,11 +33,11 @@ class Monster:
         self.name = name
         self.life = life
 
-mon1 = Monster()
+monster = Monster()
 player = Player()
   
 
-print(mon1.name, mon1.life)
+print(monster.name, monster.life)
 print(player.name, player.life)
 
 player.SetLife(30)
