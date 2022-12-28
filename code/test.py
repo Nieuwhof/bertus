@@ -10,7 +10,12 @@ class player:
         name = 'Player'
         self.name = name
         self.life = life
+    
+    def GetLife(self):
+        return self.life
 
+    def SetLife(self,num):
+        self.life = num
 
 class Monster:
     def __init__(self):
@@ -21,9 +26,11 @@ class Monster:
 
 mon1 = Monster()
 play = player()
-mon3 = Monster()  
+  
 
 print(mon1.name, mon1.life)
 print(play.name, play.life)
-print(mon3.name, mon3.life)
+
+play.SetLife(30)
+print(play.GetLife())
 
