@@ -4,7 +4,7 @@ import random
 items = ["Spider","Troll","Vampire","Wolf","Thing", "leech", "Bombardier Bug", "Zombie"]
 items2 = [100,80,85,70,65,71,45,90,55,43,23,11,5]
 
-class player:
+class Player:
     def __init__(self):
         life = 100
         name = 'Player'
@@ -25,7 +25,7 @@ class Monster:
         self.life = life
 
 mon1 = Monster()
-play = player()
+play = Player()
   
 
 print(mon1.name, mon1.life)
