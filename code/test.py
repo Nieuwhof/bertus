@@ -20,6 +20,12 @@ class Player:
 class Fight:
     pass
 
+class Backpack:
+    pass
+
+class Rooms:
+    pass
+
 class Monster:
     def __init__(self):
         name = random.choice(items)
