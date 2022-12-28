@@ -17,6 +17,9 @@ class Player:
     def SetLife(self,num):
         self.life = num
 
+class Fight:
+    pass
+
 class Monster:
     def __init__(self):
         name = random.choice(items)
@@ -25,12 +28,12 @@ class Monster:
         self.life = life
 
 mon1 = Monster()
-play = Player()
+player = Player()
   
 
 print(mon1.name, mon1.life)
-print(play.name, play.life)
+print(player.name, player.life)
 
-play.SetLife(30)
-print(play.GetLife())
+player.SetLife(30)
+print(player.GetLife())
 
