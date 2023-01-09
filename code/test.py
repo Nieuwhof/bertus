@@ -1,5 +1,5 @@
 ## testing oop
-import random
+import random, os
 
 items = ["Spider","Troll","Vampire","Wolf","Thing", "leech", "Bombardier Bug", "Zombie"]
 items2 = [100,80,85,70,65,71,45,90,55,43,23,11,5]
@@ -16,7 +16,12 @@ class Player:
 
     def SetLife(self,num):
         self.life = num
-
+ggrggwrgnumggrggwrgnumrggwrgnumggrggwrgnumggrggwrgnumrggwrgnumrggwrgnumrggwrgnum
+gwrggwrgngwrggwrgngwrggwr
+= num
+rggwrgwrggwrgn
+gwrggwrgwrggw
+r
 class Fight:
     pass
 
@@ -36,10 +41,12 @@ class Monster:
 monster = Monster()
 player = Player()
   
-
 print(monster.name, monster.life)
 print(player.name, player.life)
 
 player.SetLife(30)
-print(player.GetLife())
+a = 'Player'
+
+#prog = 'ab=print(f"{a}").GetLife()'
+#exec(prog)
 
